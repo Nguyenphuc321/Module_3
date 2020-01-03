@@ -1,0 +1,34 @@
+<div class="col-md-6">  
+    <h2 class="text-center">{{empformlabel}}</h2>  
+    <form [formGroup]="addForm" novalidate class="form">  
+
+      <div class="form-group">  
+        <label for="ctId">Contract Id:</label>  
+        <input type="number" formControlName="id" placeholder="Id" name="ctId" class="form-control" id="ctId">  
+      </div>
+
+      <div class="form-group">  
+        <label for="ctngaylamhopdong">Ngay Lam Hop Dong:</label>  
+        <input type="number" formControlName="ngaylamhopdong" placeholder="Ngaylamhopdong" name="ctNgaylamhopdong" class="form-control" id="ctNgaylamhopdong">  
+      </div>
+
+      <div class="form-group">  
+        <label for="ctngayketthuc">Ngay Ket Thuc:</label>  
+        <input type="number" formControlName="ngayketthuc" placeholder="Ngayketthuc" name="ctNgayKetthuc" class="form-control" id="ctNgayKetthuc">  
+      </div>
+
+      <div class="form-group">  
+        <label for="cttiendaccoc">Tien Dac Coc:</label>  
+        <input type="number" formControlName="tiendaccoc" placeholder="Tiendaccoc" name="ctTiendaccoc" class="form-control" id="ctTiendaccoc">  
+      </div>
+
+      <div class="form-group">  
+        <label for="cttiendaccoc">Tong tien:</label>  
+        <input type="number" formControlName="tongtien" placeholder="Tongtien" name="ctTongtien" class="form-control" id="ctTongtien">  
+      </div>
+      <button class="btn btn-success" [disabled]='addForm.invalid' *ngIf="btnvisibility" (click)="onSubmit()">Save</button>  
+      <button class="btn btn-success" [disabled]='addForm.invalid' *ngIf="!btnvisibility" (click)="onUpdate()">Update</button>  
+    
+      <p>Form value: {{ addForm.value | json }}</p>  
+    </form>  
+  </div>  

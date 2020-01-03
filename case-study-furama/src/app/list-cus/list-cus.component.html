@@ -1,0 +1,31 @@
+<div class="col-md-12">
+    <button (click)="addCus()" class="btn btn-info"> Add Customer</button>    
+  <h2> User Customers</h2>  
+  <div class="table-responsive table-container">  
+    <table class="table" >  
+      <thead>  
+        <tr>  
+          <th>Id</th>  
+          <th>Name</th>  
+          <th>Age</th>  
+          <th>NgaySinh</th>
+          <th>Address</th>    
+
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let cus of customers">  
+          <td class="hidden">{{cus.id}}</td>  
+          <td>{{cus.name}}</td>  
+          <td>{{cus.age}}</td>  
+          <td>{{cus.ngaysinh}}</td>
+          <td>{{cus.address}}</td>  
+          <td>  
+            <button (click)="deleteCus(cus)" class="btn btn-info"> Delete</button>  
+            <button (click)="editCus(cus)" style="margin-left: 20px;" class="btn btn-info">Edit</button>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
+</div>  

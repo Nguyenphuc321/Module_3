@@ -1,0 +1,43 @@
+
+<div class="col-md-6">  
+    <h2 class="text-center">{{cusformlabel}}</h2>  
+    <form [formGroup]="editForm"novalidate  class="form">
+      <div class="form-group">  
+        <label for="cusId">Cus Id:</label>  
+        <input type="number" formControlName="id" placeholder="Id" name="cusId" class="form-control" id="cusId">  
+      </div>  
+    
+      <div class="form-group">  
+        <label for="cusName">Customer Name:</label>  
+        <input formControlName="name" placeholder="Customer Name" name="cusName" class="form-control" id="cusName">  
+        <div class="alert  alert-danger" *ngIf="editForm.get('name').hasError('required') && addForm.get('name').touched">  
+          Customer Name is required  
+        </div>  
+      </div>  
+    
+      <div class="form-group">  
+        <label for="empSalary">Ngay Sinh:</label>  
+        <input formControlName="ngaysinh" placeholder="Ngay Sinh" name="ngaysinh" class="form-control" id="ngaysinh">  
+        <div class="alert  alert-danger" *ngIf="editForm.get('ngaysinh')">  
+        </div>  
+      </div>
+
+      <div class="form-group">  
+        <label for="empSalary">Address:</label>  
+        <input formControlName="address" placeholder="Address" name="address" class="form-control" id="address">  
+        <div class="alert  alert-danger" *ngIf="editForm.get('address')">  
+        </div>  
+      </div>  
+    
+      <div class="form-group">  
+        <label for="empAge">Customer Age:</label>  
+        <input formControlName="age" placeholder="Customer Age" name="cusAge" class="form-control" id="cusAge">  
+        <div class="alert  alert-danger" *ngIf=" editForm.get('age').hasError('maxlength') && addForm.get('age').touched">  
+          Age is required and should less than 3 characters.  
+        </div>  
+      </div>  
+       <button class="btn btn-success" [disabled]='editForm.invalid'  (click)="onUpdate()">Update</button>  
+    
+      <p>Form value: {{ editForm.value | json }}</p>  
+    </form>  
+  </div>  

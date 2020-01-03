@@ -1,0 +1,32 @@
+<div class="col-md-12">
+    <button (click)="addCt()" class="btn btn-info"> Add Contract</button>    
+  <h2> User Contract</h2>  
+  <div class="table-responsive table-container">  
+    <table class="table" >  
+      <thead>  
+        <tr>  
+          <th>Id</th>  
+          <th>ngaylamhopdong</th>  
+          <th>ngayketthuc</th>  
+          <th>tiendaccoc</th>
+          <th>tongtien</th>    
+
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let ct of customers">  
+          <td class="hidden">{{ct.id}}</td>  
+          <td>{{ct.ngaylamhopdong}}</td>  
+          <td>{{ct.ngayketthuc}}</td>  
+          <td>{{ct.tiendaccoc}}</td>
+          <td>{{ct.tongtien}}</td>  
+          <td>  
+            <button (click)="deleteCus(ct)" class="btn btn-info"> Delete</button>  
+            <button (click)="editCus(ct)" style="margin-left: 20px;" class="btn btn-info">Edit</button>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
+</div>  
+

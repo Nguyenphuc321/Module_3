@@ -1,0 +1,79 @@
+{
+  "customer": [
+    {
+      "id": 123,
+      "name": "nguyen van C",
+      "age": "1331231",
+      "ngaysinh": "11",
+      "address": "biên hòa"
+    },
+    {
+      "id": 4,
+      "name": "nguyen van C",
+      "age": "19",
+      "ngaysinh": "11",
+      "address": "biên hòa"
+    },
+    {
+      "id": 3,
+      "name": "nguyen van C",
+      "age": "22",
+      "ngaysinh": "11",
+      "address": "biên hòa"
+    }
+  ],
+  "employees": [
+    {
+      "id": 11,
+      "employee_name": "nguyen van c",
+      "employee_salary": "10000",
+      "employee_age": "19"
+    },
+    {
+      "id": 2,
+      "employee_name": "nguyen van A",
+      "employee_salary": "154000",
+      "employee_age": "29"
+    },
+    {
+      "id": 3,
+      "employee_name": "nguyen van c",
+      "employee_salary": "10000",
+      "employee_age": "29"
+    }
+  ],
+  "service": [
+    {
+      "id": 1,
+      "name_service": "dich vu nha hang",
+      "acreage": "11",
+      "numberoffloors": "50m2",
+      "numberofpeople": "5",
+      "rentalcosts": "5000"
+    },
+    {
+      "id": 2,
+      "name_service": "dich vu khach san",
+      "acreage": "14",
+      "numberoffloors": "40m2",
+      "numberofpeople": "6",
+      "rentalcosts": "3000"
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "ngaylamhopdong":"11",
+      "ngayketthuc":"22",
+      "tiendaccoc":"1000",
+      "tongtien":"30000"
+    },
+    {
+      "id": 1,
+      "ngay lam hop dong":"22",
+      "ngayketthuc":"24",
+      "tiendaccoc":"3000",
+      "tongtien":"40000"
+    }
+  ]
+}
